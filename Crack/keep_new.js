@@ -1,4 +1,8 @@
 /*
+作者：photonmang
+脚本更新：
+2021/4/18 修复因Keep课程调整导致的一直加载问题
+
 注意：此解锁仅针对Keep版本号6.24-6.27的版本。其他版本的未做适配，后续看心情适配。
 
 智能计划使用说明：请根据自己的训练时间计划，自行安排时间和结束时间。时间设置请自行在startDate和endDate修改开始结束时间。
@@ -26,7 +30,7 @@ const path6 = '/athena/v4/people/my'
 const path7 = 'start|join';
 const path8 = '/kprime/v2/home/complete';
 const path9 = 'detail';
-const path10 = 'preview'
+//const path10 = 'preview'
 const path11 = '/kprime/v1/auth'
 const path13 = '/training/v3/suits/days'
 if (url.indexOf(path1) != -1) {
@@ -64,9 +68,9 @@ obj.data.memberEntrance.prime = true;
 obj.data.memberEntrance.memberStatus = 1;
 obj.data.memberInfo.memberStatus = 1;
 }
-if (url.indexOf(path10) != -1) {
-obj.data.extendInfo.sectionStyle = "after";
-}
+//  if (url.indexOf(path10) != -1) {
+//  obj.data.extendInfo.sectionStyle = "after";
+//  }
 if (url.indexOf(path11) != -1) {
 obj.data = {
   "id": 3685024,
